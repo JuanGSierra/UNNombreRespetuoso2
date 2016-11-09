@@ -54,6 +54,11 @@ public class printContact extends javax.swing.JFrame {
 
         jButton1.setText("Actualizar");
         jButton1.setActionCommand("jButton2");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,6 +103,14 @@ public class printContact extends javax.swing.JFrame {
         Contact c = contactos.get(jComboBox1.getSelectedIndex());
         jTextArea1.setText(c.toString());
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        jComboBox1.removeAllItems();
+        for (Contact contacto : contactos) {
+            jComboBox1.addItem(contacto.getNombre() + " " + contacto.getApellido());
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
