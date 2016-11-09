@@ -16,11 +16,13 @@ public class UpdateContact extends javax.swing.JFrame {
 
     private ContactsBookGUI master;
     ArrayList<Contact> contactos;
+
     /**
      * Creates new form UpdateContact
      */
-    public UpdateContact(ContactsBookGUI master) {
+    public UpdateContact(ContactsBookGUI master, ArrayList<Contact> contactos) {
         this.master = master;
+        this.contactos = contactos;
         initComponents();
     }
 

@@ -7,31 +7,41 @@ package UI;
 
 import Data.Contact;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author macas
  */
 public class printAllContacts extends javax.swing.JFrame {
-    
+
     private ContactsBookGUI master;
-    
+
     ArrayList<Contact> contactos;
 
     /**
      * Creates new form printAllContacts
      */
-    public printAllContacts(ContactsBookGUI master) {
+    public printAllContacts(ContactsBookGUI master, ArrayList<Contact> contactos) {
         this.master = master;
+        this.contactos = contactos;
         initComponents();
     }
-    
+
     public void mostrar() {
-        String output = "";
-        for (Contact contacto : contactos) {
-            output += contacto.toString() + "\n\n";
+        if (contactos.size() < 1) {
+            JOptionPane.showMessageDialog(null, "No hay contactos!!");
+            master.setVisible(true);
+            this.setVisible(false);
+        } else {
+            String output = "";
+            for (Contact contacto : contactos) {
+                output += contacto.toString() + "\n\n";
+            }
+            jTextArea1.setText(output);
         }
-        jTextArea1.setText(output);
+
     }
 
     /**

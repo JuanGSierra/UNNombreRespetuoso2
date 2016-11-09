@@ -20,9 +20,9 @@ public class printContact extends javax.swing.JFrame {
     /**
      * Creates new form printContact
      */
-    public printContact(ContactsBookGUI master) {
+    public printContact(ContactsBookGUI master, ArrayList<Contact> contactos) {
         this.master = master;
-
+        this.contactos = contactos;
         initComponents();
     }
 

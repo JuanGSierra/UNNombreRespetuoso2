@@ -16,11 +16,13 @@ public class RemoveContact extends javax.swing.JFrame {
 
     private ContactsBookGUI master;
     ArrayList<Contact> contactos;
+
     /**
      * Creates new form RemoveContact
      */
-    public RemoveContact(ContactsBookGUI master) {
+    public RemoveContact(ContactsBookGUI master, ArrayList<Contact> contactos) {
         this.master = master;
+        this.contactos = contactos;
         initComponents();
     }
 
