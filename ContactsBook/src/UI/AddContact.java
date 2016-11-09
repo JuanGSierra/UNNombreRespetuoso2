@@ -5,6 +5,9 @@
  */
 package UI;
 
+import Data.Contact;
+import java.util.ArrayList;
+
 /**
  *
  * @author macas
@@ -13,7 +16,7 @@ public class AddContact extends javax.swing.JFrame {
 
     
     private ContactsBookGUI master;
-
+    ArrayList<Contact> contactos;
 
     /**
      * Creates new form AddContact

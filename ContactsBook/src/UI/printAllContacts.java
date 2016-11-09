@@ -5,12 +5,16 @@
  */
 package UI;
 
+import Data.Contact;
+import java.util.ArrayList;
+
 /**
  *
  * @author macas
  */
 public class printAllContacts extends javax.swing.JFrame {
 
+    ArrayList<Contact> contactos;
     /**
      * Creates new form printAllContacts
      */

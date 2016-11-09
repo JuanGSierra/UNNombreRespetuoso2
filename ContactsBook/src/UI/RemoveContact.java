@@ -5,6 +5,9 @@
  */
 package UI;
 
+import Data.Contact;
+import java.util.ArrayList;
+
 /**
  *
  * @author macas
@@ -12,7 +15,7 @@ package UI;
 public class RemoveContact extends javax.swing.JFrame {
 
     private ContactsBookGUI master;
-
+    ArrayList<Contact> contactos;
     /**
      * Creates new form RemoveContact
      */
