@@ -6,8 +6,10 @@
 package Logic;
 
 import Data.*;
+import UI.ContactsBookGUI;
 import UI.ContactsBookUI;
 import java.util.ArrayList;
+import javax.swing.JFrame;
 
 /**
  *
@@ -417,6 +419,8 @@ public class ContactsBook implements NewInterface {
 
     public static void main(String[] args) {
         ContactsBook contactsBook = new ContactsBook();
+        JFrame a = new ContactsBookGUI();
+        a.setVisible(true);
         int opc;
         do {
             ContactsBookUI.printMethodOptions();
