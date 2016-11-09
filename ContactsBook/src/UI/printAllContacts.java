@@ -30,8 +30,8 @@ public class printAllContacts extends javax.swing.JFrame {
     }
 
     public void mostrar() {
-        if (contactos.size() < 1) {
-            JOptionPane.showMessageDialog(null, "No hay contactos!!");
+        if (contactos == null) {
+            JOptionPane.showMessageDialog(master, "No hay contactos!!");
             master.setVisible(true);
             this.setVisible(false);
         } else {

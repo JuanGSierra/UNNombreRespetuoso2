@@ -16,7 +16,7 @@ public class AddContact extends javax.swing.JFrame {
 
     private ContactsBookGUI master;
 
-    ArrayList<Contact> contactos;
+    ArrayList<Contact> contactos = new ArrayList<Contact>();
 
     /**
      * Creates new form AddContact
@@ -113,6 +113,12 @@ public class AddContact extends javax.swing.JFrame {
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
             }
         });
 
@@ -215,11 +221,20 @@ public class AddContact extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String[] correos= new String[2];
-        correos[0]=jTextField2.getText();
-        correos[1]=jTextField7.getText();
-        contactos.add(new Contact(jTextField1.getText(), jTextField5.getText(), correos, Integer.parseInt(jTextField3.getText()), Long.parseLong(jTextField4.getText()), jTextField6.getText()));
+        String correos[];
+        correos = new String[2];
+        correos[0] = "";
+        correos[1] = "";
+        correos[0] = jTextField2.getText();
+        correos[1] = jTextField7.getText();
+        Contact c = new Contact(jTextField1.getText(), jTextField5.getText(), correos, Integer.parseInt(jTextField3.getText()), Long.parseLong(jTextField4.getText()), jTextField6.getText());
+        contactos.add(c);
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

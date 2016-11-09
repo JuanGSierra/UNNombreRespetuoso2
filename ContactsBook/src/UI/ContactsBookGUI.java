@@ -8,13 +8,14 @@ package UI;
 import javax.swing.JFrame;
 import Data.*;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author macas
  */
 public class ContactsBookGUI extends javax.swing.JFrame {
-
+    
     ArrayList<Contact> contactos;
 
     /**
@@ -184,10 +185,9 @@ public class ContactsBookGUI extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         printAllContacts a = new printAllContacts(this, contactos);
-
         a.setVisible(true);
-        a.mostrar();
         this.setVisible(false);
+        a.mostrar();
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -223,6 +223,7 @@ public class ContactsBookGUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         JFrame a = new AddContact(this, contactos);
+        
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -271,7 +272,9 @@ public class ContactsBookGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new ContactsBookGUI().setVisible(true);
+                
             }
         });
     }
