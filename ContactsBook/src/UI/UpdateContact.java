@@ -20,6 +20,7 @@ public class UpdateContact extends javax.swing.JFrame {
      */
     public UpdateContact() {
         initComponents();
+        
     }
 
     /**
