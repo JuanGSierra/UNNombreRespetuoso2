@@ -184,8 +184,9 @@ public class ContactsBookGUI extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         printAllContacts a = new printAllContacts(this);
-        a.mostrar();
+        
         a.setVisible(true);
+        a.mostrar();
         this.setVisible(false);
         
     }//GEN-LAST:event_jButton4ActionPerformed
