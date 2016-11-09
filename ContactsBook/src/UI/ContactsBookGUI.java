@@ -99,10 +99,15 @@ public class ContactsBookGUI extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("Visulaizar un Contacto");
+        jButton5.setText("Visualizar un Contacto");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton5MouseClicked(evt);
+            }
+        });
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
             }
         });
 
@@ -174,6 +179,8 @@ public class ContactsBookGUI extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        JFrame a = new printAllContacts();
+        a.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -215,6 +222,12 @@ public class ContactsBookGUI extends javax.swing.JFrame {
         JFrame a = new RemoveContact();
         a.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        JFrame a = new printContact();
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
