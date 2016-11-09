@@ -14,6 +14,8 @@ public class AddContact extends javax.swing.JFrame {
     /**
      * Creates new form AddContact
      */
+    
+    
     public AddContact() {
         initComponents();
     }

@@ -6,13 +6,14 @@
 package UI;
 
 import javax.swing.JFrame;
-
+import Data.*;
+import java.util.ArrayList;
 /**
  *
  * @author macas
  */
 public class ContactsBookGUI extends javax.swing.JFrame {
-
+    ArrayList <Contact> contactos;
     /**
      * Creates new form ContactsBookGUI
      */
