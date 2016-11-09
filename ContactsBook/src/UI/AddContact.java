@@ -11,6 +11,7 @@ package UI;
  */
 public class AddContact extends javax.swing.JFrame {
 
+    
     /**
      * Creates new form AddContact
      */
