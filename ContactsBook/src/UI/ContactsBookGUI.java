@@ -8,16 +8,31 @@ package UI;
 import javax.swing.JFrame;
 import Data.*;
 import java.util.ArrayList;
+
 /**
  *
  * @author macas
  */
 public class ContactsBookGUI extends javax.swing.JFrame {
-    ArrayList <Contact> contactos;
+
+    ArrayList<Contact> contactos;
+    private AddContact addContact;
+    private RemoveContact removeContact;
+    private UpdateContact updateContact;
+    private PrintAllContacts printAllContacts;
+    private PrintContact printContact;
+
     /**
      * Creates new form ContactsBookGUI
      */
     public ContactsBookGUI() {
+        /*
+        addContact = new AddContact(this);
+        removeContact = new RemoveContact(this);
+        updateContact = new UpdateContact(this);
+        printAllContacts = new PrintAllContacts(this);
+        printContact = new PrintContact(this);
+         */
         initComponents();
     }
 
@@ -174,13 +189,13 @@ public class ContactsBookGUI extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        JFrame a = new UpdateContact();
+        JFrame a = new UpdateContact(this);
         a.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        JFrame a = new printAllContacts();
+        JFrame a = new PrintAllContacts(this);
         a.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -214,19 +229,19 @@ public class ContactsBookGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        JFrame a = new AddContact();
+        JFrame a = new AddContact(this);
         a.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        JFrame a = new RemoveContact();
+        JFrame a = new RemoveContact(this);
         a.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        JFrame a = new printContact();
+        JFrame a = new PrintContact(this);
         a.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -258,11 +273,8 @@ public class ContactsBookGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ContactsBookGUI().setVisible(true);
-            }
-        });
+        ContactsBookGUI master = new ContactsBookGUI();
+        master.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
