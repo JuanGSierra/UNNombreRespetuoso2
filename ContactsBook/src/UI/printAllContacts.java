@@ -25,6 +25,14 @@ public class printAllContacts extends javax.swing.JFrame {
         this.master = master;
         initComponents();
     }
+    
+    public void mostrar(){
+        String output="";
+        for (Contact contacto : contactos) {
+            output+=contacto.toString()+"\n\n";
+        }
+        jTextArea1.setText(output);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,9 +63,9 @@ public class printAllContacts extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
