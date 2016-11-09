@@ -22,6 +22,7 @@ public class ContactsBookGUI extends javax.swing.JFrame {
      * Creates new form ContactsBookGUI
      */
     public ContactsBookGUI() {
+        contactos= new ArrayList<>();
         initComponents();
     }
 

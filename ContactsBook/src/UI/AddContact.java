@@ -16,7 +16,7 @@ public class AddContact extends javax.swing.JFrame {
 
     private ContactsBookGUI master;
 
-    ArrayList<Contact> contactos = new ArrayList<Contact>();
+    ArrayList<Contact> contactos;
 
     /**
      * Creates new form AddContact
